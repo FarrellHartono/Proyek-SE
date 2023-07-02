@@ -1,0 +1,21 @@
+<?php
+	include "koneksi.php";
+	
+	$usernametoko = $_REQUEST['usernametoko'];
+	$passwordtoko = $_REQUEST['passwordtoko'];
+	$nomortelepontoko = $_REQUEST['phonenumbertoko'];
+	$namatoko = $_REQUEST['namatoko'];
+	$alamattoko = $_REQUEST['alamattoko'];
+	$layanantoko = $_REQUEST['jenislayanan'];
+	$deskripsitoko = $_REQUEST['deskripsitoko'];
+	$jamoperasitoko = $_REQUEST['jamoperasi'];
+	$terms = $_REQUEST['terms'];
+	
+	if ($usernametoko == "" || $passwordtoko == "" || $nomortelepontoko == "" || $namatoko == "" || $alamattoko == "" || $layanantoko == "" || $deskripsitoko == "" || $jamoperasitoko == "" || $terms != "agree"){
+		echo "<script type = 'text/javascript'> 
+							alert('MOHON ISI SEMUA DATA YANG DIPERLUKAN');
+							window.location = 'registertoko.php';
+					</script>";
+	}
+	
+?>
